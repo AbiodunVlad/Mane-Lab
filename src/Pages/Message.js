@@ -1,12 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 
 export default function Message() {
+  const [message, setMessage] = useState({
+    name: "",
+    email: "",
+    requirement: "",
+    moreDetails: "",
+  });
+
+  const [messageSent, setMessageSent] = useState(false);
+
+  const toggleOverlay = () => {
+    setMessageSent(!messageSent);
+  };
+
+  const onChangeHandler = (event) => {
+    setMessage(() => ({
+      ...message,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const onSubmitHandler = (event) => {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("requirement").value = "";
+    document.getElementById("moreDetails").value = "";
+
+    event.preventDefault();
+
+    toggleOverlay();
+
+    axios
+      .post("http://jsonplaceholder.typicode.com/posts", { message })
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
+      {messageSent && (
+        <div className="modal">
+          <div onClick={toggleOverlay} className="overlay"></div>
+          <div className="modal-content">
+            <h2 className="messageH2">Message sent!</h2>
+            <p>
+              We have received your message. Expect an email from us shortly.
+            </p>
+            <button className="close-modal" onClick={toggleOverlay}>
+              <FontAwesomeIcon icon="fa-solid fa-x" />
+            </button>
+          </div>
+        </div>
+      )}
       <Header />
+
       <div className="aboutHero">
         <h1 className="messageH1">Let’s help you realize that dream.</h1>
         <p className="aboutTxt">
@@ -21,14 +74,15 @@ export default function Message() {
             className="joinImg"
           />
         </div>
-        <form className="form">
+        <form className="form" onSubmit={onSubmitHandler}>
           <input
-            type="name"
+            type="text"
             name="name"
             id="name"
             placeholder="Name"
             required
             className="formInput"
+            onChange={onChangeHandler}
           />
           <input
             type="email"
@@ -37,26 +91,31 @@ export default function Message() {
             placeholder="Email"
             required
             className="formInput"
+            onChange={onChangeHandler}
           />
           <input
-            type="requirement"
+            type="text"
             name="requirement"
             id="requirement"
             placeholder="What do you wish to do?"
             required
             className="formInput"
+            onChange={onChangeHandler}
           />
 
           <textarea
-            type="moreDetails"
+            type="text"
             name="moreDetails"
             placeholder="More details"
             id="moreDetails"
             required
             className="formInput"
+            onChange={onChangeHandler}
           />
 
-          <Button className="formBtn">Submit</Button>
+          <Button type="submit" className="formBtn">
+            Submit
+          </Button>
         </form>
       </div>
       <Footer />
