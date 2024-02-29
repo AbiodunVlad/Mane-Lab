@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
+// import axios from "axios";
+import emailjs from "@emailjs/browser";
 
 export default function Message() {
   const [message, setMessage] = useState({
@@ -27,20 +28,42 @@ export default function Message() {
   };
 
   const onSubmitHandler = (event) => {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("requirement").value = "";
-    document.getElementById("moreDetails").value = "";
+    // document.getElementById("name").value = "";
+    // document.getElementById("email").value = "";
+    // document.getElementById("requirement").value = "";
+    // document.getElementById("moreDetails").value = "";
+
+    setMessage({
+      name: "",
+      email: "",
+      requirement: "",
+      moreDetails: "",
+    });
 
     event.preventDefault();
 
     toggleOverlay();
 
-    axios
-      .post("http://jsonplaceholder.typicode.com/posts", { message })
-      .then((response) => console.log(response))
-      .catch((err) => console.log(err));
+    emailjs
+      .sendForm("service_c1bs9ip", "template_99x6wwq", form.current, {
+        publicKey: "dwbE0hXxfyy2LedKO",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
+    // axios
+    //   .post("http://jsonplaceholder.typicode.com/posts", { message })
+    //   .then((response) => console.log(response))
+    //   .catch((err) => console.log(err));
   };
+
+  const form = useRef();
 
   return (
     <>
@@ -74,7 +97,7 @@ export default function Message() {
             className="joinImg"
           />
         </div>
-        <form className="form" onSubmit={onSubmitHandler}>
+        <form ref={form} className="form" onSubmit={onSubmitHandler}>
           <input
             type="text"
             name="name"

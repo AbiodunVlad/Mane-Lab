@@ -7,7 +7,7 @@ body {
   background-color: #0c3959;
   flex-direction: "row";
   height: 50px;
-  /* width: 100%; */
+
   align-items: center;
   justify-content: space-between;
 
@@ -70,7 +70,6 @@ body {
   flex-direction: column;
   width: 35%;
   justify-content: right;
-  /* text-align: right; */
 }
 
 .rightFooterTxt {
