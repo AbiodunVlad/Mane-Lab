@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+/* .active {
+  background-color: #1d4ed8;
+} */
+
 .header {
   background-color: #0c3959;
   flex-direction: "row";
@@ -14,7 +18,8 @@ body {
   display: flex;
   padding-left: 50px;
   padding-right: 50px;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .headerLogo {
@@ -34,6 +39,24 @@ body {
 .hearderTxt {
   color: #fff;
   text-decoration: none;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 1.5rem;
+}
+
+.menuLine {
+  height: 0.2rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
 }
 
 .buildCTA {
@@ -91,4 +114,103 @@ body {
 
 .footerIcons {
   color: #fff;
+}
+
+/* @media (max-width: 480px) {
+  .menu {
+    display: flex;
+  }
+
+  .hearder {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .headerLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    gap: 10px;
+    align-items: end;
+    margin-top: 165px;
+    margin-right: 0;
+    padding-right: 0px;
+    background-color: #000;
+  }
+
+  
+} */
+
+/* For header */
+@media screen and (max-width: 768px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .headerLinks {
+    display: none;
+    flex-direction: column;
+    margin-top: 187px;
+    margin-right: 0px;
+    gap: 15px;
+    align-items: end;
+    background-color: #000;
+    padding: 5px;
+    width: auto;
+  }
+
+  /* .menu {
+    display: flex; 
+  } */
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .menuLine {
+    height: 0.2rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .showMenu {
+    display: flex;
+  }
+}
+
+/* For footer */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left-footer,
+  .right-footer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rightFooterTxt {
+    text-align: center;
+  }
+
+  .iconDiv {
+    justify-content: center;
+
+    gap: 20px;
+    display: flex;
+  }
 }

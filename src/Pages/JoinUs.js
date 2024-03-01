@@ -101,70 +101,73 @@ export default function JoinUs() {
             className="joinImg"
           />
         </div>
-        <form ref={form} className="form" onSubmit={onSubmitHandler}>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-            value={join.name}
-          />
 
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-            value={join.email}
-          />
+        <div className="formDiv">
+          <form ref={form} className="form" onSubmit={onSubmitHandler}>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+              value={join.name}
+            />
 
-          <input
-            type="text"
-            name="skills"
-            id="skills"
-            placeholder="Skills"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-            value={join.skills}
-          />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+              value={join.email}
+            />
 
-          <input
-            type="number"
-            name="experience"
-            id="experience"
-            placeholder="Years of Experience"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-            value={join.experience}
-          />
+            <input
+              type="text"
+              name="skills"
+              id="skills"
+              placeholder="Skills"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+              value={join.skills}
+            />
 
-          <textarea
-            type="text"
-            name="coverLetter"
-            placeholder="Cover Letter"
-            id="coverLetter"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-            value={join.coverLetter}
-          />
+            <input
+              type="number"
+              name="experience"
+              id="experience"
+              placeholder="Years of Experience"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+              value={join.experience}
+            />
 
-          <Button
-            type="submit"
-            className="formBtn"
-            onClick={() => console.log(join)}
-          >
-            Submit
-          </Button>
-        </form>
+            <textarea
+              type="text"
+              name="coverLetter"
+              placeholder="Cover Letter"
+              id="coverLetter"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+              value={join.coverLetter}
+            />
+
+            <Button
+              type="submit"
+              className="formBtn"
+              onClick={() => console.log(join)}
+            >
+              Submit
+            </Button>
+          </form>
+        </div>
       </div>
       <Footer />
     </>

@@ -21,11 +21,13 @@ export default function About() {
         </p>
       </div>
 
-      <img
-        src={require("../images/aboutHero.png")}
-        alt="heroImage"
-        className="aboutImage"
-      />
+      <div className="aboutImg">
+        <img
+          src={require("../images/aboutHero.png")}
+          alt="heroImage"
+          className="aboutImage"
+        />
+      </div>
 
       <div className="mission">
         <h2>Our Mission</h2>

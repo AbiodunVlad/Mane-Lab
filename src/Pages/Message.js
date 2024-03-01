@@ -97,49 +97,52 @@ export default function Message() {
             className="joinImg"
           />
         </div>
-        <form ref={form} className="form" onSubmit={onSubmitHandler}>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-          />
-          <input
-            type="text"
-            name="requirement"
-            id="requirement"
-            placeholder="What do you wish to do?"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-          />
 
-          <textarea
-            type="text"
-            name="moreDetails"
-            placeholder="More details"
-            id="moreDetails"
-            required
-            className="formInput"
-            onChange={onChangeHandler}
-          />
+        <div className="formDiv">
+          <form ref={form} className="form" onSubmit={onSubmitHandler}>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+            />
+            <input
+              type="text"
+              name="requirement"
+              id="requirement"
+              placeholder="What do you wish to do?"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+            />
 
-          <Button type="submit" className="formBtn">
-            Submit
-          </Button>
-        </form>
+            <textarea
+              type="text"
+              name="moreDetails"
+              placeholder="More details"
+              id="moreDetails"
+              required
+              className="formInput"
+              onChange={onChangeHandler}
+            />
+
+            <Button type="submit" className="formBtn">
+              Submit
+            </Button>
+          </form>
+        </div>
       </div>
       <Footer />
     </>

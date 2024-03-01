@@ -49,17 +49,28 @@ a {
 .heroProducts {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 30px;
+
+  justify-content: center;
 }
 
 .serviceDiv {
-  width: auto;
+  /* width: auto;
   height: auto;
   background-color: #0c3959;
   padding: 5px;
   border-radius: 7px;
   color: #fff;
+  font-size: auto; */
+  flex: 0 0 calc(33.33% - 20px); /* Each product occupies one-third of the available space minus gap */
+  max-width: calc(33.33% - 80px); /* Set max-width for flexibility */
+  background-color: #0c3959;
+  padding: 5px;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center; /* Center align text */
 }
 
 .rightCol {
@@ -299,13 +310,18 @@ a {
   border-radius: 20px;
 }
 
-.form {
+.formDiv {
   width: 50%;
+  margin-right: 50px;
+}
+
+.form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
   justify-content: center;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 .formInput {
@@ -357,4 +373,214 @@ a {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  /* Adjustments for hero section */
+  .aboutHero,
+  .heroSection {
+    flex-direction: column; /* Stack hero section items vertically */
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    justify-content: space-between;
+  }
+
+  .leftCol {
+    width: 100%; /* Full width for both columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+  }
+
+  .aboutImg,
+  .rightCol,
+  .joinDiv {
+    width: 100%; /* Full width for both columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heroImage {
+    border-bottom-left-radius: 0; /* Remove border radius for better display */
+    border-bottom-right-radius: 0;
+  }
+
+  .aboutImage {
+    border-bottom-left-radius: 0; /* Remove border radius for better display */
+    border-bottom-right-radius: 0;
+    object-fit: contain;
+    margin-top: -70px;
+    margin-bottom: -60px;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 0;
+  }
+
+  .messageH1 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+
+  .messageH2 {
+    text-align: center;
+  }
+
+  .pageHeader {
+    width: 100%;
+    /* padding-left: 20px; */
+    justify-content: center;
+    display: flex;
+  }
+
+  /* Adjustments for other sections */
+  .section2,
+  .section3,
+  .mission,
+  .letsWork,
+  .joinDiv {
+    padding: 20px; /* Adjust padding for better spacing */
+  }
+
+  .projects,
+  .projects2 {
+    flex-wrap: wrap; /* Allow projects to wrap on smaller screens */
+    gap: 10px; /* Adjust gap between project items */
+  }
+
+  .heroProducts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 20px;
+    /* margin-right: 20px; */
+  }
+
+  .serviceDiv {
+    /* width: auto;
+    height: auto;
+    background-color: #0c3959;
+    padding: 5px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: auto; */
+    flex: 0 0 calc(50% - 20px); /* Each product occupies half of the available space minus gap */
+    max-width: calc(50% - 20px); /* Set max-width for flexibility */
+  }
+
+  .serviceDiv,
+  .services,
+  .teamDiv,
+  .projectTitle {
+    width: 100%; /* Full width for these items */
+  }
+
+  .serviceDiv,
+  .services,
+  .projects,
+  .projectTitle {
+    text-align: center; /* Center align text */
+  }
+
+  .serviceDiv {
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+  }
+
+  .projects img,
+  .projectImg {
+    width: 100%; /* Make project images fill their containers */
+    height: auto; /* Ensure aspect ratio is maintained */
+  }
+
+  .services {
+    margin-bottom: 20px; /* Adjust margin for better spacing */
+  }
+
+  .aboutHero,
+  .mission,
+  .team,
+  .letsWork,
+  .projectTitle {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .aboutTxt {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .teamImg {
+    border-radius: 50%; /* Ensure team images are circular */
+  }
+
+  /* Adjustments for forms */
+  /* .formDiv {
+    width: 50%;
+  }
+
+  .form {
+    width: 100%; 
+    margin-right: 0; 
+  } */
+
+  /* Adjustments for modal */
+  .modal-content {
+    max-width: 90%; /* Adjust max-width for modal content */
+  }
+
+  .joinDiv {
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    /* margin-bottom: 50px; */
+  }
+
+  .joinImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .formDiv {
+    width: 100%;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+  }
 }
