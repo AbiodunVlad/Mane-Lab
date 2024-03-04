@@ -280,6 +280,10 @@ a {
   gap: 20px;
 }
 
+.projectTxt {
+  margin-top: -40px;
+}
+
 .projectDiv {
   width: 30%;
   height: auto;
@@ -375,7 +379,8 @@ a {
   padding: 5px 7px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 70em) {
+  /*768px 1176px*/
   body {
     font-size: 14px; /* Adjust font size for better readability on smaller screens */
   }
@@ -419,8 +424,8 @@ a {
     border-bottom-left-radius: 0; /* Remove border radius for better display */
     border-bottom-right-radius: 0;
     object-fit: contain;
-    margin-top: -70px;
-    margin-bottom: -60px;
+    margin-top: -30px;
+    margin-bottom: -20px;
   }
 
   h1 {
@@ -489,15 +494,13 @@ a {
 
   .serviceDiv,
   .services,
-  .teamDiv,
-  .projectTitle {
+  .teamDiv {
     width: 100%; /* Full width for these items */
   }
 
   .serviceDiv,
   .services,
-  .projects,
-  .projectTitle {
+  .projects {
     text-align: center; /* Center align text */
   }
 
@@ -518,8 +521,7 @@ a {
   .aboutHero,
   .mission,
   .team,
-  .letsWork,
-  .projectTitle {
+  .letsWork {
     margin-left: 0; /* Remove left margin */
     margin-right: 0; /* Remove right margin */
   }
@@ -569,6 +571,7 @@ a {
     justify-content: center;
     display: flex;
     align-items: center;
+    margin-bottom: 100%;
   }
 
   .form {
@@ -582,5 +585,44 @@ a {
     margin-bottom: 50px;
     /* padding-left: 20px;
     padding-right: 20px; */
+  }
+
+  .projectTitle {
+    background-color: #d9d9d9;
+    width: 90%;
+    height: 180px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    border-radius: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .projectTxt {
+    margin-top: -40px;
+  }
+
+  .titleDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectDiv {
+    padding: 10px;
+    width: 30%;
+    height: auto;
+  }
+
+  .projectImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }

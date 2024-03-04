@@ -78,6 +78,9 @@ body {
   padding-top: 20px;
   padding-bottom: 50px;
   margin-top: 2px;
+  bottom: 0;
+  /* width: 100%; */
+  /* position: fixed; */
 }
 
 .left-footer {

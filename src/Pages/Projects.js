@@ -5,14 +5,16 @@ import { Button } from "react-bootstrap";
 
 export default function Projects() {
   return (
-    <>
+    <div className="generalProject">
       <Header />
       <div className="heroSection">
         <div className="leftCol">
-          <div className="pageHeader">
+          <div className="aboutHero">
+            {" "}
+            {/*pageHeader*/}
             <h1>Projects</h1>
+            <p className="aboutTxt">We have created some magic in the past.</p>
           </div>
-          <p className="aboutTxt">We have created some magic in the past.</p>
         </div>
 
         <div className="rightCol">
@@ -23,77 +25,74 @@ export default function Projects() {
           />
         </div>
       </div>
-      <div className="projectTitle">
-        <div className="projectDiv">
-          <img
-            src={require("../images/project1.png")}
-            alt=""
-            className="projectImg"
-          />
-        </div>
-        <div className="projectDiv2">
-          <h2>Project Title</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-          {/* <a href="/projectdetails">
+
+      <div className="titleDiv">
+        <div className="projectTitle">
+          <div className="projectDiv">
+            <img
+              src={require("../images/broadview3.png")}
+              alt=""
+              className="projectImg"
+            />
+          </div>
+          <div className="projectDiv2">
+            <h2>Broadview Capital</h2>
+            <p className="projectTxt">
+              Broadview Capital is a private equity firm concentrated on real
+              estate acquisition, development, and management across the globe.
+            </p>
+
+            {/* <a href="/projectdetails">
             <Button className="buildCTA">View more</Button>
           </a> */}
+          </div>
         </div>
-      </div>
-      <div className="projectTitle">
-        <div className="projectDiv">
-          <img
-            src={require("../images/project2.png")}
-            alt=""
-            className="projectImg"
-          />
-        </div>
-        <div className="projectDiv2">
-          <h2>Project Title</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-          {/* <a href="/projectdetails">
+        <div className="projectTitle">
+          <div className="projectDiv">
+            <img
+              src={require("../images/su.png")}
+              alt=""
+              className="projectImg"
+            />
+          </div>
+          <div className="projectDiv2">
+            <h2>Service U</h2>
+            <p className="projectTxt">
+              Service U: A convenient mobile app for connecting with skilled
+              artisans and domestic service providers in your neighborhood.
+              Browse, book, and pay for services with ease. Verified
+              professionals, real-time tracking, and hassle-free scheduling.
+              Simplify your life with Service U.
+            </p>
+            {/* <a href="/projectdetails">
             <Button className="buildCTA">View more</Button>
           </a> */}
+          </div>
         </div>
-      </div>
-      <div className="projectTitle">
-        <div className="projectDiv">
-          <img
-            src={require("../images/project3.png")}
-            alt=""
-            className="projectImg"
-          />
-        </div>
-        <div className="projectDiv2">
-          <h2>Project Title</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-          {/* <a href="/projectdetails">
+        <div className="projectTitle">
+          <div className="projectDiv">
+            <img
+              src={require("../images/harborchurch.png")}
+              alt=""
+              className="projectImg"
+            />
+          </div>
+          <div className="projectDiv2">
+            <h2>The Harbor Church LA</h2>
+            <p className="projectTxt">
+              The Harbor Church LA: A sanctuary of home, healing, and hope,
+              centered on Jesus Christ. It has a mission to provide a welcoming
+              space where people can find solace, restoration, and faith
+              Christ's love.
+            </p>
+            {/* <a href="/projectdetails">
             <Button className="buildCTA">View more</Button>
           </a> */}
+          </div>
         </div>
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
