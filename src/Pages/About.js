@@ -12,7 +12,7 @@ export default function About() {
         <h1>About Måne Labs</h1>
 
         <p className="aboutTxt">
-          We are a technoogy company with distributed teams, with the aim of
+          We are a technology company with distributed teams, with the aim of
           utilising product knowledge, marketing, engineering, and other
           software tools to proffer solutions in form of services to individuals
           and businesses. Our business goals are centered around the passion to
