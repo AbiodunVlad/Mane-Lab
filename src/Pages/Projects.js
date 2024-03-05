@@ -36,7 +36,7 @@ export default function Projects() {
             />
           </div>
           <div className="projectDiv2">
-            <h2>Broadview Capital</h2>
+            <h3>Broadview Capital</h3>
             <p className="projectTxt">
               Broadview Capital is a private equity firm concentrated on real
               estate acquisition, development, and management across the globe.
@@ -56,7 +56,7 @@ export default function Projects() {
             />
           </div>
           <div className="projectDiv2">
-            <h2>Service U</h2>
+            <h3>Service U</h3>
             <p className="projectTxt">
               Service U: A convenient mobile app for connecting with skilled
               artisans and domestic service providers in your neighborhood.
@@ -78,7 +78,7 @@ export default function Projects() {
             />
           </div>
           <div className="projectDiv2">
-            <h2>The Harbor Church LA</h2>
+            <h3>The Harbor Church LA</h3>
             <p className="projectTxt">
               The Harbor Church LA: A sanctuary of home, healing, and hope,
               centered on Jesus Christ. It has a mission to provide a welcoming
