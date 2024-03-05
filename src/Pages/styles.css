@@ -432,6 +432,7 @@ a {
     font-size: 60px;
     font-weight: 800;
     margin-bottom: 0;
+    text-align: center;
   }
 
   .messageH1 {
@@ -524,6 +525,16 @@ a {
   .letsWork {
     margin-left: 0; /* Remove left margin */
     margin-right: 0; /* Remove right margin */
+  }
+
+  .mission {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    /* padding-bottom: 100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .aboutTxt {

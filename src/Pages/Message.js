@@ -84,7 +84,7 @@ export default function Message() {
       <Header />
 
       <div className="aboutHero">
-        <h1 className="messageH1">Let’s help you realize that dream.</h1>
+        <h1 className="messageH1">Let’s help you realize that dream</h1>
         <p className="aboutTxt">
           Send a message and we’ll reach out to you shortly.{" "}
         </p>

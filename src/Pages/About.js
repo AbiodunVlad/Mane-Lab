@@ -9,7 +9,9 @@ export default function About() {
       <Header />
 
       <div className="aboutHero">
-        <h1>About Måne Labs</h1>
+        <div className="pageHeader">
+          <h1>About Måne Labs</h1>
+        </div>
 
         <p className="aboutTxt">
           We are a technology company with distributed teams, with the aim of
